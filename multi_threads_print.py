@@ -48,7 +48,7 @@ class MultiThreadsPrint:
         self.start()
 
     def output(self):
-        while self.ac() > self.start_ac:
+        while self.ac() > self.start_ac or len(self.list) != 0:
             if len(self.list):
                 content = self.list.pop(0)
                 print(*content[0], end=content[1])
